@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsVotazioniCommissione" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Commissioni/WsVotazioniCommissione.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Commissioni/WsVotazioniCommissione.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Commissioni/WsVotazioniCommissione.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Commissioni.Votazioni" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsVotazioniCommissione_GetListaPareri_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaPareri" />
+  </wsdl:message>
+  <wsdl:message name="IWsVotazioniCommissione_GetListaPareri_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaPareriResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsVotazioniCommissione_GetVotoUtente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVotoUtente" />
+  </wsdl:message>
+  <wsdl:message name="IWsVotazioniCommissione_GetVotoUtente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVotoUtenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsVotazioniCommissione_UtentePuoEsprimereVoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:UtentePuoEsprimereVoto" />
+  </wsdl:message>
+  <wsdl:message name="IWsVotazioniCommissione_UtentePuoEsprimereVoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UtentePuoEsprimereVotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsVotazioniCommissione_EsprimiVotoPerUtente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EsprimiVotoPerUtente" />
+  </wsdl:message>
+  <wsdl:message name="IWsVotazioniCommissione_EsprimiVotoPerUtente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EsprimiVotoPerUtenteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsVotazioniCommissione">
+    <wsdl:operation name="GetListaPareri">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsVotazioniCommissione/GetListaPareri" message="tns:IWsVotazioniCommissione_GetListaPareri_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsVotazioniCommissione/GetListaPareriResponse" message="tns:IWsVotazioniCommissione_GetListaPareri_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVotoUtente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsVotazioniCommissione/GetVotoUtente" message="tns:IWsVotazioniCommissione_GetVotoUtente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsVotazioniCommissione/GetVotoUtenteResponse" message="tns:IWsVotazioniCommissione_GetVotoUtente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UtentePuoEsprimereVoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsVotazioniCommissione/UtentePuoEsprimereVoto" message="tns:IWsVotazioniCommissione_UtentePuoEsprimereVoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsVotazioniCommissione/UtentePuoEsprimereVotoResponse" message="tns:IWsVotazioniCommissione_UtentePuoEsprimereVoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EsprimiVotoPerUtente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsVotazioniCommissione/EsprimiVotoPerUtente" message="tns:IWsVotazioniCommissione_EsprimiVotoPerUtente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsVotazioniCommissione/EsprimiVotoPerUtenteResponse" message="tns:IWsVotazioniCommissione_EsprimiVotoPerUtente_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsVotazioniCommissione" type="tns:IWsVotazioniCommissione">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetListaPareri">
+      <soap:operation soapAction="http://tempuri.org/IWsVotazioniCommissione/GetListaPareri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVotoUtente">
+      <soap:operation soapAction="http://tempuri.org/IWsVotazioniCommissione/GetVotoUtente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UtentePuoEsprimereVoto">
+      <soap:operation soapAction="http://tempuri.org/IWsVotazioniCommissione/UtentePuoEsprimereVoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsprimiVotoPerUtente">
+      <soap:operation soapAction="http://tempuri.org/IWsVotazioniCommissione/EsprimiVotoPerUtente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsVotazioniCommissione">
+    <wsdl:port name="BasicHttpBinding_IWsVotazioniCommissione" binding="tns:BasicHttpBinding_IWsVotazioniCommissione">
+      <soap:address location="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Commissioni/WsVotazioniCommissione.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

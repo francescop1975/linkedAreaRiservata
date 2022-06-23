@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.Endoprocedimenti" />
+  <xs:element name="GetEndoprocedimentiIncompatibili">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="listaIdEndoAttivati" nillable="true" type="q1:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndoprocedimentiIncompatibiliResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" minOccurs="0" name="GetEndoprocedimentiIncompatibiliResult" nillable="true" type="q2:ArrayOfEndoprocedimentoIncompatibileDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndoprocedimentoById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceEndo" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="ambitoRicercaDocumenti" type="q3:AmbitoRicerca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndoprocedimentoByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" minOccurs="0" name="GetEndoprocedimentoByIdResult" nillable="true" type="q4:EndoprocedimentoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndoprocedimentoDaIdMappatura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceEndoRemoto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEndoprocedimentoDaIdMappaturaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" minOccurs="0" name="GetEndoprocedimentoDaIdMappaturaResult" nillable="true" type="q5:EndoprocedimentoMappatoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListaEndoDaIdIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceComune" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIntervento" type="xs:int" />
+        <xs:element minOccurs="0" name="utenteTester" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListaEndoDaIdInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" minOccurs="0" name="GetListaEndoDaIdInterventoResult" nillable="true" type="q6:EndoprocedimentiAreaRiservataDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNaturaBaseDaidEndoprocedimento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idEndoprocedimento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNaturaBaseDaidEndoprocedimentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" minOccurs="0" name="GetNaturaBaseDaidEndoprocedimentoResult" nillable="true" type="q7:NaturaBaseEndoprocedimentoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipiTitoloEndoDaListaCodiciInventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="listaCodiciInventario" nillable="true" type="q8:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipiTitoloEndoDaListaCodiciInventarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.Endoprocedimenti" minOccurs="0" name="GetTipiTitoloEndoDaListaCodiciInventarioResult" nillable="true" type="q9:ArrayOfTipiTitoloPerCodiceInventario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipoTitoloById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceTipoTitolo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipoTitoloByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" minOccurs="0" name="GetTipoTitoloByIdResult" nillable="true" type="q10:TipiTitoloDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllegatiEndoprocedimentiAreaRiservata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="codiciEndoSelezionati" nillable="true" type="q11:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllegatiEndoprocedimentiAreaRiservataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" minOccurs="0" name="GetAllegatiEndoprocedimentiAreaRiservataResult" nillable="true" type="q12:ArrayOfAllegatiPerEndoprocedimentoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

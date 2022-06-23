@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSchedaDinamicaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchedaDinamicaDto" nillable="true" type="tns:SchedaDinamicaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchedaDinamicaDto" nillable="true" type="tns:ArrayOfSchedaDinamicaDto" />
+  <xs:complexType name="SchedaDinamicaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="CodiceScheda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoFirma" type="tns:TipoFirmaEnum" />
+      <xs:element minOccurs="0" name="Facoltativa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ordine" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FvgMostraNelBackoffice" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Pubblica" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchedaDinamicaDto" nillable="true" type="tns:SchedaDinamicaDto" />
+  <xs:simpleType name="TipoFirmaEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NessunaFirma" />
+      <xs:enumeration value="InteroModello" />
+      <xs:enumeration value="SingoliBlocchi" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoFirmaEnum" nillable="true" type="tns:TipoFirmaEnum" />
+  <xs:complexType name="SchedaDinamicaInterventoDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchedaDinamicaDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchedaDinamicaInterventoDto" nillable="true" type="tns:SchedaDinamicaInterventoDto" />
+  <xs:complexType name="SchedaDinamicaEndoprocedimentoDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchedaDinamicaDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodiceEndo" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchedaDinamicaEndoprocedimentoDto" nillable="true" type="tns:SchedaDinamicaEndoprocedimentoDto" />
+</xs:schema>

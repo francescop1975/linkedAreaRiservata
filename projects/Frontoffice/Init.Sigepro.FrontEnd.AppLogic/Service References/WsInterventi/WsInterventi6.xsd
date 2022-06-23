@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.AllegatiDomandaOnline" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd12" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.Interventi" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.AttraversamentoAlberoInterventi.VerificaAttivazione" />
+  <xs:element name="GetAlberaturaDaIdNodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlberaturaDaIdNodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" minOccurs="0" name="GetAlberaturaDaIdNodoResult" nillable="true" type="q1:NodoAlberoInterventiDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategorieAllegatiInterventoChePermettonoUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="software" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategorieAllegatiInterventoChePermettonoUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="GetCategorieAllegatiInterventoChePermettonoUploadResult" nillable="true" type="q2:ArrayOfAlberoProcDocumentiCat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCodiceOggettoWorkflowDaCodiceIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCodiceOggettoWorkflowDaCodiceInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCodiceOggettoWorkflowDaCodiceInterventoResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDettagliIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIntervento" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="ambitoRicercaDocumenti" type="q3:AmbitoRicerca" />
+        <xs:element minOccurs="0" name="leggiNoteEstese" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDettagliInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" minOccurs="0" name="GetDettagliInterventoResult" nillable="true" type="q4:InterventoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentiDaCodiceIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIntervento" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="ambitoRicercaDocumenti" type="q5:AmbitoRicerca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentiDaCodiceInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.AllegatiDomandaOnline" minOccurs="0" name="GetDocumentiDaCodiceInterventoResult" nillable="true" type="q6:ArrayOfAllegatoInterventoDomandaOnlineDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdCertificatoDiInvioDomandaDaIdIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdCertificatoDiInvioDomandaDaIdInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIdCertificatoDiInvioDomandaDaIdInterventoResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdDrupalDaCodiceIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdDrupalDaCodiceInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIdDrupalDaCodiceInterventoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdRiepilogoDomandaDaIdIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIdRiepilogoDomandaDaIdInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIdRiepilogoDomandaDaIdInterventoResult" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListaIdNodiPadreIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListaIdNodiPadreInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetListaIdNodiPadreInterventoResult" nillable="true" type="q7:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLivelloDiAccessoIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLivelloDiAccessoInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLivelloDiAccessoInterventoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSottonodiIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="software" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idNodo" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="ambitoRicerca" type="q8:AmbitoRicerca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSottonodiInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" minOccurs="0" name="GetSottonodiInterventoResult" nillable="true" type="q9:ArrayOfInterventoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSottonodiInterventoDaIdAteco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="software" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idNodoPadre" type="xs:int" />
+        <xs:element minOccurs="0" name="idAteco" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="ambitoRicerca" type="q10:AmbitoRicerca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSottonodiInterventoDaIdAtecoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" minOccurs="0" name="GetSottonodiInterventoDaIdAtecoResult" nillable="true" type="q11:ArrayOfInterventoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStrutturaAlberoInterventi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="software" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStrutturaAlberoInterventiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" minOccurs="0" name="GetStrutturaAlberoInterventiResult" nillable="true" type="q12:NodoAlberoInterventiDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HaPresentatoDomandePerIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idIntervento" type="xs:int" />
+        <xs:element minOccurs="0" name="codiceFiscaleRichiedente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HaPresentatoDomandePerInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HaPresentatoDomandePerInterventoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterventoSupportaRedirect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterventoSupportaRedirectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InterventoSupportaRedirectResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RicercaTestualeInterventi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="software" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="matchParziale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="matchCount" type="xs:int" />
+        <xs:element minOccurs="0" name="modoRicerca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoRicerca" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="ambitoRicerca" type="q13:AmbitoRicerca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RicercaTestualeInterventiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.Interventi" minOccurs="0" name="RicercaTestualeInterventiResult" nillable="true" type="q14:ArrayOfInterventoBreveDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificaAccessoIntervento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="livelloAutenticazione" type="q15:LivelloAutenticazioneBOEnum" />
+        <xs:element minOccurs="0" name="codiceIntervento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificaAccessoInterventoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.AttraversamentoAlberoInterventi.VerificaAttivazione" minOccurs="0" name="VerificaAccessoInterventoResult" type="q16:RisultatoVerificaAccessoIntervento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

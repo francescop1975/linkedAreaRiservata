@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.DatiDinamici" />
+  <xs:element name="GetCompletionListRicerchePlus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCampo" type="xs:int" />
+        <xs:element minOccurs="0" name="partial" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" minOccurs="0" name="filtri" nillable="true" type="q1:ArrayOfValoreFiltroRicercaDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompletionListRicerchePlusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" minOccurs="0" name="GetCompletionListRicerchePlusResult" nillable="true" type="q2:ArrayOfRisultatoRicercaDatiDinamiciDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDyn2DatiByCodiceIstanza">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIstanza" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDyn2DatiByCodiceIstanzaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="GetDyn2DatiByCodiceIstanzaResult" nillable="true" type="q3:ArrayOfIstanzeDyn2Dati" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDyn2DatiByIdModello">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIstanza" type="xs:int" />
+        <xs:element minOccurs="0" name="idModello" type="xs:int" />
+        <xs:element minOccurs="0" name="indiceCampo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDyn2DatiByIdModelloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="GetDyn2DatiByIdModelloResult" nillable="true" type="q4:ArrayOfIstanzeDyn2Dati" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModelliDinamiciDaInterventoEEndo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.DatiDinamici" minOccurs="0" name="request" nillable="true" type="q5:GetModelliDinamiciDaInterventoEEndoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModelliDinamiciDaInterventoEEndoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" minOccurs="0" name="GetModelliDinamiciDaInterventoEEndoResult" nillable="true" type="q6:ListaModelliDinamiciDomandaDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStrutturaModelloDinamico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idModello" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStrutturaModelloDinamicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.DatiDinamici" minOccurs="0" name="GetStrutturaModelloDinamicoResult" nillable="true" type="q7:StrutturaModelloDinamicoDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitializeControlRicerchePlus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCampo" type="xs:int" />
+        <xs:element minOccurs="0" name="valore" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitializeControlRicerchePlusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" minOccurs="0" name="InitializeControlRicerchePlusResult" nillable="true" type="q8:RisultatoRicercaDatiDinamiciDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaDocumentiIstanzaCollegata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codiceIstanzaOrigine" type="xs:int" />
+        <xs:element minOccurs="0" name="idDomandaDestinazione" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaDocumentiIstanzaCollegataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDecodificheAttive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tabella" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDecodificheAttiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" minOccurs="0" name="GetDecodificheAttiveResult" nillable="true" type="q9:ArrayOfDecodificaDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

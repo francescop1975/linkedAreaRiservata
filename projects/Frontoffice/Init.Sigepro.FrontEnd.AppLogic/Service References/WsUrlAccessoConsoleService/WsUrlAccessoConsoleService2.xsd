@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.GestioneConsole.UrlAccesso" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.GestioneConsole.UrlAccesso" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ConfigurazioneUrlConsole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Default" nillable="true" type="tns:UrlConsole" />
+      <xs:element minOccurs="0" name="UrlLocalizzati" nillable="true" type="tns:ArrayOfUrlConsolePerComune" />
+      <xs:element minOccurs="0" name="UrlLocalizzatiAttivi" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigurazioneUrlConsole" nillable="true" type="tns:ConfigurazioneUrlConsole" />
+  <xs:complexType name="UrlConsole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CrossLoginUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlIstanzeInSospeso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlNuovaDomanda" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UrlConsole" nillable="true" type="tns:UrlConsole" />
+  <xs:complexType name="ArrayOfUrlConsolePerComune">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UrlConsolePerComune" nillable="true" type="tns:UrlConsolePerComune" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUrlConsolePerComune" nillable="true" type="tns:ArrayOfUrlConsolePerComune" />
+  <xs:complexType name="UrlConsolePerComune">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UrlConsole">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodiceComune" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UrlConsolePerComune" nillable="true" type="tns:UrlConsolePerComune" />
+</xs:schema>

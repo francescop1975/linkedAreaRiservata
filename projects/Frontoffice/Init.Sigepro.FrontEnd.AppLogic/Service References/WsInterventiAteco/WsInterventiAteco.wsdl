@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsInterventiAteco" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Init.Utils" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Normative" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Oneri" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Procedure" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsInterventiAteco_CaricaListaIdGerarchiaAteco_InputMessage">
+    <wsdl:part name="parameters" element="tns:CaricaListaIdGerarchiaAteco" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_CaricaListaIdGerarchiaAteco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CaricaListaIdGerarchiaAtecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_GetAlberoProcDaIdAteco_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlberoProcDaIdAteco" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_GetAlberoProcDaIdAteco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlberoProcDaIdAtecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_GetDettagliAteco_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDettagliAteco" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_GetDettagliAteco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDettagliAtecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_GetNodiFiglioAteco_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNodiFiglioAteco" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_GetNodiFiglioAteco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNodiFiglioAtecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_RicercaAteco_InputMessage">
+    <wsdl:part name="parameters" element="tns:RicercaAteco" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_RicercaAteco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RicercaAtecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_VerificaEsistenzaNodiCollegatiAIdAteco_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaEsistenzaNodiCollegatiAIdAteco" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventiAteco_VerificaEsistenzaNodiCollegatiAIdAteco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaEsistenzaNodiCollegatiAIdAtecoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsInterventiAteco">
+    <wsdl:operation name="CaricaListaIdGerarchiaAteco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventiAteco/CaricaListaIdGerarchiaAteco" message="tns:IWsInterventiAteco_CaricaListaIdGerarchiaAteco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventiAteco/CaricaListaIdGerarchiaAtecoResponse" message="tns:IWsInterventiAteco_CaricaListaIdGerarchiaAteco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlberoProcDaIdAteco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventiAteco/GetAlberoProcDaIdAteco" message="tns:IWsInterventiAteco_GetAlberoProcDaIdAteco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventiAteco/GetAlberoProcDaIdAtecoResponse" message="tns:IWsInterventiAteco_GetAlberoProcDaIdAteco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDettagliAteco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventiAteco/GetDettagliAteco" message="tns:IWsInterventiAteco_GetDettagliAteco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventiAteco/GetDettagliAtecoResponse" message="tns:IWsInterventiAteco_GetDettagliAteco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNodiFiglioAteco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventiAteco/GetNodiFiglioAteco" message="tns:IWsInterventiAteco_GetNodiFiglioAteco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventiAteco/GetNodiFiglioAtecoResponse" message="tns:IWsInterventiAteco_GetNodiFiglioAteco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RicercaAteco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventiAteco/RicercaAteco" message="tns:IWsInterventiAteco_RicercaAteco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventiAteco/RicercaAtecoResponse" message="tns:IWsInterventiAteco_RicercaAteco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaEsistenzaNodiCollegatiAIdAteco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventiAteco/VerificaEsistenzaNodiCollegatiAIdAteco" message="tns:IWsInterventiAteco_VerificaEsistenzaNodiCollegatiAIdAteco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventiAteco/VerificaEsistenzaNodiCollegatiAIdAtecoResponse" message="tns:IWsInterventiAteco_VerificaEsistenzaNodiCollegatiAIdAteco_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsInterventiAteco" type="tns:IWsInterventiAteco">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CaricaListaIdGerarchiaAteco">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventiAteco/CaricaListaIdGerarchiaAteco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlberoProcDaIdAteco">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventiAteco/GetAlberoProcDaIdAteco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDettagliAteco">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventiAteco/GetDettagliAteco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNodiFiglioAteco">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventiAteco/GetNodiFiglioAteco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RicercaAteco">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventiAteco/RicercaAteco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaEsistenzaNodiCollegatiAIdAteco">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventiAteco/VerificaEsistenzaNodiCollegatiAIdAteco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsInterventiAteco">
+    <wsdl:port name="BasicHttpBinding_IWsInterventiAteco" binding="tns:BasicHttpBinding_IWsInterventiAteco">
+      <soap:address location="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" />
+  <xs:complexType name="ArrayOfAlberoProcDocumentiCat">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AlberoProcDocumentiCat" nillable="true" type="tns:AlberoProcDocumentiCat" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlberoProcDocumentiCat" nillable="true" type="tns:ArrayOfAlberoProcDocumentiCat" />
+  <xs:complexType name="AlberoProcDocumentiCat">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element name="m_codiceoggetto" nillable="true" type="xs:int" />
+          <xs:element name="m_descrizione" nillable="true" type="xs:string" />
+          <xs:element name="m_fo_nonpermetteupload" nillable="true" type="xs:int" />
+          <xs:element name="m_fo_richiedefirma" nillable="true" type="xs:int" />
+          <xs:element name="m_id" nillable="true" type="xs:int" />
+          <xs:element name="m_idcomune" nillable="true" type="xs:string" />
+          <xs:element name="m_oggetto" nillable="true" type="tns:Oggetti" />
+          <xs:element name="m_ordine" nillable="true" type="xs:int" />
+          <xs:element name="m_software" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AlberoProcDocumentiCat" nillable="true" type="tns:AlberoProcDocumentiCat" />
+  <xs:complexType name="BaseDataClass">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" base="q1:DataClass">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseDataClass" nillable="true" type="tns:BaseDataClass" />
+  <xs:complexType name="Oggetti">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element name="codiceoggetto" nillable="true" type="xs:string" />
+          <xs:element name="idcomune" nillable="true" type="xs:string" />
+          <xs:element name="nomefile" nillable="true" type="xs:string" />
+          <xs:element name="oggetto" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Oggetti" nillable="true" type="tns:Oggetti" />
+</xs:schema>

@@ -1,0 +1,1 @@
+2021-11-26 17:58:20,395 [6] ERROR Init.Sigepro.FrontEnd.Reserved.Commissioni.lista_commissioni - L'utente Gargagli Nicola (codice anagrafe 174) ha cercato di accedere ad una commissione con un PIN non valido: asdasd

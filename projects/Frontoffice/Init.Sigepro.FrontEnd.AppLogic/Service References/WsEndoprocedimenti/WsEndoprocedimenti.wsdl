@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsEndoprocedimenti" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Normative" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Oneri" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.Endoprocedimenti" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsEndoprocedimenti_GetEndoprocedimentiIncompatibili_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndoprocedimentiIncompatibili" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetEndoprocedimentiIncompatibili_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndoprocedimentiIncompatibiliResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetEndoprocedimentoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndoprocedimentoById" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetEndoprocedimentoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndoprocedimentoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetEndoprocedimentoDaIdMappatura_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndoprocedimentoDaIdMappatura" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetEndoprocedimentoDaIdMappatura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEndoprocedimentoDaIdMappaturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetListaEndoDaIdIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaEndoDaIdIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetListaEndoDaIdIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaEndoDaIdInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetNaturaBaseDaidEndoprocedimento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNaturaBaseDaidEndoprocedimento" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetNaturaBaseDaidEndoprocedimento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNaturaBaseDaidEndoprocedimentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetTipiTitoloEndoDaListaCodiciInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipiTitoloEndoDaListaCodiciInventario" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetTipiTitoloEndoDaListaCodiciInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipiTitoloEndoDaListaCodiciInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetTipoTitoloById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoTitoloById" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetTipoTitoloById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoTitoloByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetAllegatiEndoprocedimentiAreaRiservata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllegatiEndoprocedimentiAreaRiservata" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoprocedimenti_GetAllegatiEndoprocedimentiAreaRiservata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllegatiEndoprocedimentiAreaRiservataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsEndoprocedimenti">
+    <wsdl:operation name="GetEndoprocedimentiIncompatibili">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentiIncompatibili" message="tns:IWsEndoprocedimenti_GetEndoprocedimentiIncompatibili_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentiIncompatibiliResponse" message="tns:IWsEndoprocedimenti_GetEndoprocedimentiIncompatibili_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEndoprocedimentoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentoById" message="tns:IWsEndoprocedimenti_GetEndoprocedimentoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentoByIdResponse" message="tns:IWsEndoprocedimenti_GetEndoprocedimentoById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEndoprocedimentoDaIdMappatura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentoDaIdMappatura" message="tns:IWsEndoprocedimenti_GetEndoprocedimentoDaIdMappatura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentoDaIdMappaturaResponse" message="tns:IWsEndoprocedimenti_GetEndoprocedimentoDaIdMappatura_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListaEndoDaIdIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetListaEndoDaIdIntervento" message="tns:IWsEndoprocedimenti_GetListaEndoDaIdIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetListaEndoDaIdInterventoResponse" message="tns:IWsEndoprocedimenti_GetListaEndoDaIdIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNaturaBaseDaidEndoprocedimento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetNaturaBaseDaidEndoprocedimento" message="tns:IWsEndoprocedimenti_GetNaturaBaseDaidEndoprocedimento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetNaturaBaseDaidEndoprocedimentoResponse" message="tns:IWsEndoprocedimenti_GetNaturaBaseDaidEndoprocedimento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipiTitoloEndoDaListaCodiciInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetTipiTitoloEndoDaListaCodiciInventario" message="tns:IWsEndoprocedimenti_GetTipiTitoloEndoDaListaCodiciInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetTipiTitoloEndoDaListaCodiciInventarioResponse" message="tns:IWsEndoprocedimenti_GetTipiTitoloEndoDaListaCodiciInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoTitoloById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetTipoTitoloById" message="tns:IWsEndoprocedimenti_GetTipoTitoloById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetTipoTitoloByIdResponse" message="tns:IWsEndoprocedimenti_GetTipoTitoloById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllegatiEndoprocedimentiAreaRiservata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetAllegatiEndoprocedimentiAreaRiservata" message="tns:IWsEndoprocedimenti_GetAllegatiEndoprocedimentiAreaRiservata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoprocedimenti/GetAllegatiEndoprocedimentiAreaRiservataResponse" message="tns:IWsEndoprocedimenti_GetAllegatiEndoprocedimentiAreaRiservata_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsEndoprocedimenti" type="tns:IWsEndoprocedimenti">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEndoprocedimentiIncompatibili">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentiIncompatibili" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndoprocedimentoById">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentoById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndoprocedimentoDaIdMappatura">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoprocedimenti/GetEndoprocedimentoDaIdMappatura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaEndoDaIdIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoprocedimenti/GetListaEndoDaIdIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNaturaBaseDaidEndoprocedimento">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoprocedimenti/GetNaturaBaseDaidEndoprocedimento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipiTitoloEndoDaListaCodiciInventario">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoprocedimenti/GetTipiTitoloEndoDaListaCodiciInventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoTitoloById">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoprocedimenti/GetTipoTitoloById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllegatiEndoprocedimentiAreaRiservata">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoprocedimenti/GetAllegatiEndoprocedimentiAreaRiservata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsEndoprocedimenti">
+    <wsdl:port name="BasicHttpBinding_IWsEndoprocedimenti" binding="tns:BasicHttpBinding_IWsEndoprocedimenti">
+      <soap:address location="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Endoprocedimenti/WsEndoprocedimenti.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

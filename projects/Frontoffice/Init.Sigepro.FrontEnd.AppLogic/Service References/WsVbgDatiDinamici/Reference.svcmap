@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf1aa4ac-253a-41d6-ab26-74f3bc4b5650" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WsDatiDinamici.xsd" MetadataType="Schema" ID="4770120c-8fc3-49e8-8d2b-31c9eeb113c4" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd5" />
+    <MetadataFile FileName="WsDatiDinamici1.xsd" MetadataType="Schema" ID="bba7f15e-76a2-404a-940c-bf23645c329b" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd6" />
+    <MetadataFile FileName="WsDatiDinamici2.xsd" MetadataType="Schema" ID="2d62e131-d1ea-4526-8bae-61d7d2fdaf4d" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd4" />
+    <MetadataFile FileName="WsDatiDinamici3.xsd" MetadataType="Schema" ID="c8434a30-2b25-4823-83c2-224f993ac0e7" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd0" />
+    <MetadataFile FileName="WsDatiDinamici4.xsd" MetadataType="Schema" ID="2cdb1d28-7d34-4d89-b4bc-5f4e90753261" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd1" />
+    <MetadataFile FileName="WsDatiDinamici5.xsd" MetadataType="Schema" ID="516549e9-99a6-4251-b8a0-f94959951349" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd2" />
+    <MetadataFile FileName="WsDatiDinamici6.xsd" MetadataType="Schema" ID="f6c5cf1b-2d52-4251-9ef3-35a64e0518fe" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd3" />
+    <MetadataFile FileName="WsDatiDinamici.wsdl" MetadataType="Wsdl" ID="2b2dc777-d573-4ab2-ac32-5384b23f5815" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?wsdl" />
+    <MetadataFile FileName="WsDatiDinamici.disco" MetadataType="Disco" ID="db85fc82-c424-4770-b2d9-ca15198d78c9" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

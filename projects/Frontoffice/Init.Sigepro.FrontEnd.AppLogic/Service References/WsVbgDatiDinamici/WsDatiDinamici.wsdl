@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsDatiDinamici" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.DatiDinamici" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsDatiDinamici_GetCompletionListRicerchePlus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletionListRicerchePlus" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetCompletionListRicerchePlus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletionListRicerchePlusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetDyn2DatiByCodiceIstanza_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDyn2DatiByCodiceIstanza" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetDyn2DatiByCodiceIstanza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDyn2DatiByCodiceIstanzaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetDyn2DatiByIdModello_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDyn2DatiByIdModello" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetDyn2DatiByIdModello_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDyn2DatiByIdModelloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetModelliDinamiciDaInterventoEEndo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelliDinamiciDaInterventoEEndo" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetModelliDinamiciDaInterventoEEndo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModelliDinamiciDaInterventoEEndoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetStrutturaModelloDinamico_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrutturaModelloDinamico" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetStrutturaModelloDinamico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrutturaModelloDinamicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_InitializeControlRicerchePlus_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeControlRicerchePlus" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_InitializeControlRicerchePlus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeControlRicerchePlusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_RecuperaDocumentiIstanzaCollegata_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaDocumentiIstanzaCollegata" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_RecuperaDocumentiIstanzaCollegata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaDocumentiIstanzaCollegataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetDecodificheAttive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecodificheAttive" />
+  </wsdl:message>
+  <wsdl:message name="IWsDatiDinamici_GetDecodificheAttive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDecodificheAttiveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsDatiDinamici">
+    <wsdl:operation name="GetCompletionListRicerchePlus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetCompletionListRicerchePlus" message="tns:IWsDatiDinamici_GetCompletionListRicerchePlus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetCompletionListRicerchePlusResponse" message="tns:IWsDatiDinamici_GetCompletionListRicerchePlus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDyn2DatiByCodiceIstanza">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetDyn2DatiByCodiceIstanza" message="tns:IWsDatiDinamici_GetDyn2DatiByCodiceIstanza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetDyn2DatiByCodiceIstanzaResponse" message="tns:IWsDatiDinamici_GetDyn2DatiByCodiceIstanza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDyn2DatiByIdModello">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetDyn2DatiByIdModello" message="tns:IWsDatiDinamici_GetDyn2DatiByIdModello_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetDyn2DatiByIdModelloResponse" message="tns:IWsDatiDinamici_GetDyn2DatiByIdModello_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModelliDinamiciDaInterventoEEndo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetModelliDinamiciDaInterventoEEndo" message="tns:IWsDatiDinamici_GetModelliDinamiciDaInterventoEEndo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetModelliDinamiciDaInterventoEEndoResponse" message="tns:IWsDatiDinamici_GetModelliDinamiciDaInterventoEEndo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrutturaModelloDinamico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetStrutturaModelloDinamico" message="tns:IWsDatiDinamici_GetStrutturaModelloDinamico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetStrutturaModelloDinamicoResponse" message="tns:IWsDatiDinamici_GetStrutturaModelloDinamico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitializeControlRicerchePlus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsDatiDinamici/InitializeControlRicerchePlus" message="tns:IWsDatiDinamici_InitializeControlRicerchePlus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsDatiDinamici/InitializeControlRicerchePlusResponse" message="tns:IWsDatiDinamici_InitializeControlRicerchePlus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaDocumentiIstanzaCollegata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsDatiDinamici/RecuperaDocumentiIstanzaCollegata" message="tns:IWsDatiDinamici_RecuperaDocumentiIstanzaCollegata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsDatiDinamici/RecuperaDocumentiIstanzaCollegataResponse" message="tns:IWsDatiDinamici_RecuperaDocumentiIstanzaCollegata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDecodificheAttive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetDecodificheAttive" message="tns:IWsDatiDinamici_GetDecodificheAttive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsDatiDinamici/GetDecodificheAttiveResponse" message="tns:IWsDatiDinamici_GetDecodificheAttive_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsDatiDinamici" type="tns:IWsDatiDinamici">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCompletionListRicerchePlus">
+      <soap:operation soapAction="http://tempuri.org/IWsDatiDinamici/GetCompletionListRicerchePlus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDyn2DatiByCodiceIstanza">
+      <soap:operation soapAction="http://tempuri.org/IWsDatiDinamici/GetDyn2DatiByCodiceIstanza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDyn2DatiByIdModello">
+      <soap:operation soapAction="http://tempuri.org/IWsDatiDinamici/GetDyn2DatiByIdModello" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelliDinamiciDaInterventoEEndo">
+      <soap:operation soapAction="http://tempuri.org/IWsDatiDinamici/GetModelliDinamiciDaInterventoEEndo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrutturaModelloDinamico">
+      <soap:operation soapAction="http://tempuri.org/IWsDatiDinamici/GetStrutturaModelloDinamico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitializeControlRicerchePlus">
+      <soap:operation soapAction="http://tempuri.org/IWsDatiDinamici/InitializeControlRicerchePlus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaDocumentiIstanzaCollegata">
+      <soap:operation soapAction="http://tempuri.org/IWsDatiDinamici/RecuperaDocumentiIstanzaCollegata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDecodificheAttive">
+      <soap:operation soapAction="http://tempuri.org/IWsDatiDinamici/GetDecodificheAttive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsDatiDinamici">
+    <wsdl:port name="BasicHttpBinding_IWsDatiDinamici" binding="tns:BasicHttpBinding_IWsDatiDinamici">
+      <soap:address location="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

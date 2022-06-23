@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Commissioni.Votazioni" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Commissioni.Votazioni" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCommissioniVotiBaseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommissioniVotiBaseDto" nillable="true" type="tns:CommissioniVotiBaseDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommissioniVotiBaseDto" nillable="true" type="tns:ArrayOfCommissioniVotiBaseDto" />
+  <xs:complexType name="CommissioniVotiBaseDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommissioniVotiBaseDto" nillable="true" type="tns:CommissioniVotiBaseDto" />
+  <xs:complexType name="VotazionePraticaCommissioneDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RichiedeFirmaDigitale" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Voto" nillable="true" type="tns:VotoPraticaCommissioneDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VotazionePraticaCommissioneDto" nillable="true" type="tns:VotazionePraticaCommissioneDto" />
+  <xs:complexType name="VotoPraticaCommissioneDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceOggetto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CodiceParere" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DescrizioneParere" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NomeFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VotoPraticaCommissioneDto" nillable="true" type="tns:VotoPraticaCommissioneDto" />
+</xs:schema>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Normative" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Oneri" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO" />
+  <xs:complexType name="ArrayOfFamigliaEndoprocedimentoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FamigliaEndoprocedimentoDto" nillable="true" type="tns:FamigliaEndoprocedimentoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFamigliaEndoprocedimentoDto" nillable="true" type="tns:ArrayOfFamigliaEndoprocedimentoDto" />
+  <xs:complexType name="FamigliaEndoprocedimentoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codice" type="xs:int" />
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ordine" type="xs:int" />
+      <xs:element minOccurs="0" name="TipiEndoprocedimenti" nillable="true" type="tns:ArrayOfTipoEndoprocedimentoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FamigliaEndoprocedimentoDto" nillable="true" type="tns:FamigliaEndoprocedimentoDto" />
+  <xs:complexType name="ArrayOfTipoEndoprocedimentoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoEndoprocedimentoDto" nillable="true" type="tns:TipoEndoprocedimentoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoEndoprocedimentoDto" nillable="true" type="tns:ArrayOfTipoEndoprocedimentoDto" />
+  <xs:complexType name="TipoEndoprocedimentoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codice" type="xs:int" />
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Endoprocedimenti" nillable="true" type="tns:ArrayOfEndoprocedimentoDto" />
+      <xs:element minOccurs="0" name="Ordine" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoEndoprocedimentoDto" nillable="true" type="tns:TipoEndoprocedimentoDto" />
+  <xs:complexType name="ArrayOfEndoprocedimentoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EndoprocedimentoDto" nillable="true" type="tns:EndoprocedimentoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEndoprocedimentoDto" nillable="true" type="tns:ArrayOfEndoprocedimentoDto" />
+  <xs:complexType name="EndoprocedimentoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Adempimenti" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Allegati" nillable="true" type="tns:ArrayOfAllegatoDto" />
+      <xs:element minOccurs="0" name="Amministrazione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Applicazione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BinarioDipendenze" type="xs:int" />
+      <xs:element minOccurs="0" name="Codice" type="xs:int" />
+      <xs:element minOccurs="0" name="CodiceNatura" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DatiGenerali" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Movimento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Natura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NormativaNazionale" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NormativaRegionale" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NormativaUE" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Normative" minOccurs="0" name="Normative" nillable="true" type="q1:ArrayOfNormativaDto" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Oneri" minOccurs="0" name="Oneri" nillable="true" type="q2:ArrayOfOnereDto" />
+      <xs:element minOccurs="0" name="Ordine" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdineFamiglia" type="xs:int" />
+      <xs:element minOccurs="0" name="OrdineTipo" type="xs:int" />
+      <xs:element minOccurs="0" name="Principale" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Regolamenti" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Richiesto" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" minOccurs="0" name="SchedeDinamiche" nillable="true" type="q3:ArrayOfSchedaDinamicaDto" />
+      <xs:element minOccurs="0" name="SubEndo" nillable="true" type="tns:ArrayOfFamigliaEndoprocedimentoDto" />
+      <xs:element minOccurs="0" name="Tempificazione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestiEstesi" nillable="true" type="tns:ArrayOfTestiEstesiDto" />
+      <xs:element minOccurs="0" name="TipoTitoloObbligatorio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Tipologia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UltimoAggiornamento" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndoprocedimentoDto" nillable="true" type="tns:EndoprocedimentoDto" />
+  <xs:complexType name="ArrayOfAllegatoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AllegatoDto" nillable="true" type="tns:AllegatoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAllegatoDto" nillable="true" type="tns:ArrayOfAllegatoDto" />
+  <xs:complexType name="AllegatoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codice" type="xs:int" />
+      <xs:element minOccurs="0" name="CodiceOggetto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormatiDownload" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AllegatoDto" nillable="true" type="tns:AllegatoDto" />
+  <xs:complexType name="ArrayOfTestiEstesiDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestiEstesiDto" nillable="true" type="tns:TestiEstesiDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestiEstesiDto" nillable="true" type="tns:ArrayOfTestiEstesiDto" />
+  <xs:complexType name="TestiEstesiDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO" base="q4:BaseDtoOfintstring">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodiceOggetto" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Link" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Normativa" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestiEstesiDto" nillable="true" type="tns:TestiEstesiDto" />
+</xs:schema>

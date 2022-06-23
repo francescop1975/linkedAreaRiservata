@@ -1,0 +1,156 @@
+﻿.CodeMirror {
+    border: 1px solid #dfdfdf;
+    /*margin-left:250px;*/
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.CodeMirror-scroll {
+    height: 500px;
+}
+
+.CodeMirror-fullscreen {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    border: 0px solid #BBBBBB;
+    opacity: 1;
+    background-color: #fff;
+}
+
+
+/*div.linksUtili > span {
+    width: 300px;
+    display: block;
+    margin-left: 265px;
+}*/
+
+
+
+.Bottoni > input {
+    display: block;
+}
+
+.d2mf {
+    display: flex;
+    /*align-items: stretch;*/
+    font-size: 16px;
+}
+
+
+
+    .d2mf hr {
+        margin: 12px;
+        display: none;
+    }
+
+    .d2mf .lista-funzionalita {
+        width: 290px;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .d2mf > .lista-funzionalita > .mostra-using {
+        margin-bottom: 24px;
+    }
+
+
+        .d2mf > .lista-funzionalita > .mostra-using > label {
+            display: inline-block !important;
+            font-weight: normal !important;
+        }
+
+    .d2mf > .lista-funzionalita .evento {
+        margin-top: -11px;
+        margin-bottom: 12px;
+    }
+
+        .d2mf > .lista-funzionalita .evento > label {
+            display: none;
+        }
+
+    .d2mf > .lista-funzionalita > .mostra-using > input {
+        margin: 4px 4px 4px 0;
+    }
+
+
+    .d2mf > .lista-funzionalita > .comandi:before {
+        content: ' ';
+        width: 70%;
+        background-color: #f7f7f7;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        margin-bottom: 24px;
+        height: 1px;
+    }
+
+    .d2mf > .lista-funzionalita > .comandi > a {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    .d2mf .lista-funzionalita label {
+        margin-left: 0;
+        float: none;
+        width: auto;
+        text-align: left;
+        /* border: 1px solid #f00; */
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+
+    .d2mf .lista-funzionalita select {
+        width: 100%;
+        padding: 6px;
+    }
+
+    .d2mf .lista-funzionalita .fa {
+        min-width: 24px;
+    }
+
+    .d2mf .lista-funzionalita a {
+        display: block;
+        height: 16px;
+        margin-bottom: 0;
+    }
+
+    .d2mf .editor-codice {
+        /*-ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+
+            */
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+.formula-salvata {
+    /*
+            position: absolute;
+        top: 79px;
+        width: 100%;
+        z-index: 9999;
+        */
+}
+
+
+.esito-salvataggio {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    z-index: 100;
+}
+
+    .esito-salvataggio > .alert {
+        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+    }

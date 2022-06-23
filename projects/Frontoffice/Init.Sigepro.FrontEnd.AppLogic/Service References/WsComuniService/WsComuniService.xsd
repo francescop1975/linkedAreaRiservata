@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.GestioneComuni" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.GestioneComuni" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDatiComuneCompatto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DatiComuneCompatto" nillable="true" type="tns:DatiComuneCompatto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDatiComuneCompatto" nillable="true" type="tns:ArrayOfDatiComuneCompatto" />
+  <xs:complexType name="DatiComuneCompatto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cf" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodiceComune" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comune" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiglaProvincia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatiComuneCompatto" nillable="true" type="tns:DatiComuneCompatto" />
+  <xs:complexType name="DatiProvinciaCompatto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiglaProvincia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatiProvinciaCompatto" nillable="true" type="tns:DatiProvinciaCompatto" />
+  <xs:complexType name="ArrayOfDatiProvinciaCompatto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DatiProvinciaCompatto" nillable="true" type="tns:DatiProvinciaCompatto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDatiProvinciaCompatto" nillable="true" type="tns:ArrayOfDatiProvinciaCompatto" />
+</xs:schema>

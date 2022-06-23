@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dbf8085d-2d95-4ec7-a3be-c3946fd289e4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/QuestionarioFo/WsQuestionarioFoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WsQuestionarioFoService.disco" MetadataType="Disco" ID="cbd0460c-b0ad-413f-bc56-4aae0a98446c" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/QuestionarioFo/WsQuestionarioFoService.svc?disco" />
+    <MetadataFile FileName="WsQuestionarioFoService.wsdl" MetadataType="Wsdl" ID="7fda65a2-3ebc-4996-85f0-392c436fe129" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/QuestionarioFo/WsQuestionarioFoService.svc?wsdl" />
+    <MetadataFile FileName="WsQuestionarioFoService.xsd" MetadataType="Schema" ID="46489a65-c644-4243-a9e1-42b13ab49455" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/QuestionarioFo/WsQuestionarioFoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WsQuestionarioFoService1.xsd" MetadataType="Schema" ID="4a563b54-0797-4ac2-af47-9ba4117fc34b" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/QuestionarioFo/WsQuestionarioFoService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

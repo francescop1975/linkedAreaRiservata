@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.Utils" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.Utils" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" />
+  <xs:complexType name="ClassTreeOfInterventoDtoKHKR1_Pi1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ClassTreeOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Init.Utils" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="InterventoDto" Namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" minOccurs="0" name="Elemento" nillable="true" type="q1:InterventoDto" />
+      <xs:element minOccurs="0" name="NodiFiglio" nillable="true" type="tns:ArrayOfClassTreeOfInterventoDtoKHKR1_Pi1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClassTreeOfInterventoDtoKHKR1_Pi1" nillable="true" type="tns:ClassTreeOfInterventoDtoKHKR1_Pi1" />
+  <xs:complexType name="ArrayOfClassTreeOfInterventoDtoKHKR1_Pi1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClassTreeOfInterventoDtoKHKR1_Pi1" nillable="true" type="tns:ClassTreeOfInterventoDtoKHKR1_Pi1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClassTreeOfInterventoDtoKHKR1_Pi1" nillable="true" type="tns:ArrayOfClassTreeOfInterventoDtoKHKR1_Pi1" />
+</xs:schema>

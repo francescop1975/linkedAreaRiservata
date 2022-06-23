@@ -1,0 +1,40 @@
+2021-11-30 14:59:21,037 [11] ERROR Init.Sigepro.FrontEnd.AppLogic.GestioneCommissioni.WebService.CommissioniWsDao - Errore nella chiamata al metodo GetCommissioniAperteByCodiceAnagrafe per il codice anagrafe 652: System.ServiceModel.CommunicationException: Connessione sottostante chiusa: Una connessione che doveva restare attiva è stata chiusa dal server in modo imprevisto.. ---> System.Net.WebException: Connessione sottostante chiusa: Una connessione che doveva restare attiva è stata chiusa dal server in modo imprevisto.. ---> System.IO.IOException: Impossibile leggere dati dalla connessione del trasporto: Connessione in corso interrotta forzatamente dall'host remoto. ---> System.Net.Sockets.SocketException: Connessione in corso interrotta forzatamente dall'host remoto
+   in System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   in System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   in System.Net.PooledStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   in System.Net.Connection.SyncRead(HttpWebRequest request, Boolean userRetrievedStream, Boolean probeRead)
+   --- Fine della traccia dello stack dell'eccezione interna ---
+   in System.Net.HttpWebRequest.GetResponse()
+   in System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fine della traccia dello stack dell'eccezione interna ---
+
+Server stack trace: 
+   in System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   in System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   in System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   in System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   in System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   in System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   in System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   in System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   in System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   in Init.Sigepro.FrontEnd.AppLogic.CommissioniWs.IWsCommissioni.GetCommissioniAperteByCodiceAnagrafe(String token, Int32 codiceAnagrafe)
+   in Init.Sigepro.FrontEnd.AppLogic.CommissioniWs.WsCommissioniClient.GetCommissioniAperteByCodiceAnagrafe(String token, Int32 codiceAnagrafe) in C:\sviluppo\sigepro\trunk\projects\Frontoffice\Init.Sigepro.FrontEnd.AppLogic\Service References\CommissioniWs\Reference.cs:riga 62
+   in Init.Sigepro.FrontEnd.AppLogic.GestioneCommissioni.WebService.CommissioniWsDao.<>c__DisplayClass4_0.<GetCommissioniAperteByCodiceAnagrafe>b__0(ServiceInstance`1 ws) in C:\sviluppo\sigepro\trunk\projects\Frontoffice\Init.Sigepro.FrontEnd.AppLogic\GestioneCommissioni\WebService\CommissioniWsDao.cs:riga 54
+   in Init.Sigepro.FrontEnd.AppLogic.ServiceCreators.ServiceCreatorBase`1.Call[T](Func`2 callback) in C:\sviluppo\sigepro\trunk\projects\Frontoffice\Init.Sigepro.FrontEnd.AppLogic\ServiceCreators\ServiceCreatorBase.cs:riga 99
+   in Init.Sigepro.FrontEnd.AppLogic.GestioneCommissioni.WebService.CommissioniWsDao.GetCommissioniAperteByCodiceAnagrafe(Int32 codiceAnagrafe) in C:\sviluppo\sigepro\trunk\projects\Frontoffice\Init.Sigepro.FrontEnd.AppLogic\GestioneCommissioni\WebService\CommissioniWsDao.cs:riga 54
+2021-11-30 15:08:14,253 [26] ERROR Init.Sigepro.FrontEnd.Reserved.Commissioni.lista_commissioni - L'utente BOCCI RICCARDO (codice anagrafe 652) ha cercato di accedere ad una commissione con un PIN non valido: 123456
+2021-11-30 15:08:58,709 [12] ERROR Init.Sigepro.FrontEnd.Reserved.Commissioni.lista_commissioni - L'utente BOCCI RICCARDO (codice anagrafe 652) ha cercato di accedere ad una commissione con un PIN non valido: asdasd
+2021-12-09 16:54:39,473 [11] ERROR Init.Sigepro.FrontEnd.Reserved.Commissioni.lista_commissioni - Errore durante l'associazione di un utente ad una commissione tramite pin. Riferimento errore => dfb7eff3-b61d-4652-8541-8c5257cd9ee1: System.Threading.ThreadAbortException: Thread interrotto.
+   in System.Threading.Thread.AbortInternal()
+   in System.Threading.Thread.Abort(Object stateInfo)
+   in System.Web.HttpResponse.AbortCurrentThread()
+   in System.Web.HttpResponse.End()
+   in System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   in System.Web.HttpResponse.Redirect(String url)
+   in Init.Sigepro.FrontEnd.Reserved.Commissioni.lista_commissioni.RedirectUtenteACommissione(Int32 idCommissione) in C:\sviluppo\sigepro\trunk\projects\UI\Init.Sigepro.FrontEnd\Reserved\Commissioni\lista-commissioni.aspx.cs:riga 59
+   in Init.Sigepro.FrontEnd.Reserved.Commissioni.lista_commissioni.bmAccediConPin_OkClicked(Object sender, EventArgs e) in C:\sviluppo\sigepro\trunk\projects\UI\Init.Sigepro.FrontEnd\Reserved\Commissioni\lista-commissioni.aspx.cs:riga 92

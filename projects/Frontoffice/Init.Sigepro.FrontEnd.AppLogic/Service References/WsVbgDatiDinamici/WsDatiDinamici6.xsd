@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" />
+  <xs:complexType name="ArrayOfIstanzeDyn2Dati">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IstanzeDyn2Dati" nillable="true" type="tns:IstanzeDyn2Dati" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIstanzeDyn2Dati" nillable="true" type="tns:ArrayOfIstanzeDyn2Dati" />
+  <xs:complexType name="IstanzeDyn2Dati">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CampoDinamico" nillable="true" type="tns:Dyn2Campi" />
+          <xs:element minOccurs="0" name="Codiceistanza" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FkD2cId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Indice" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="IndiceMolteplicita" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Valore" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Valoredecodificato" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IstanzeDyn2Dati" nillable="true" type="tns:IstanzeDyn2Dati" />
+  <xs:complexType name="BaseDataClass">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" base="q1:DataClass">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseDataClass" nillable="true" type="tns:BaseDataClass" />
+  <xs:complexType name="Dyn2Campi">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Etichetta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FkD2bcId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nomecampo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Obbligatorio" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Software" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipodato" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Dyn2Campi" nillable="true" type="tns:Dyn2Campi" />
+  <xs:complexType name="ArrayOfDyn2Campi">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dyn2Campi" nillable="true" type="tns:Dyn2Campi" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDyn2Campi" nillable="true" type="tns:ArrayOfDyn2Campi" />
+  <xs:complexType name="Dyn2ModelliT">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodiceScheda" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FkD2bcId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FlgReadonlyWeb" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FlgStoricizza" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Modellomultiplo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Scriptcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Software" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Dyn2ModelliT" nillable="true" type="tns:Dyn2ModelliT" />
+  <xs:complexType name="ArrayOfDyn2CampiProprieta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dyn2CampiProprieta" nillable="true" type="tns:Dyn2CampiProprieta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDyn2CampiProprieta" nillable="true" type="tns:ArrayOfDyn2CampiProprieta" />
+  <xs:complexType name="Dyn2CampiProprieta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FkD2cId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Proprieta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Valore" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Dyn2CampiProprieta" nillable="true" type="tns:Dyn2CampiProprieta" />
+  <xs:complexType name="ArrayOfDyn2CampiScript">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dyn2CampiScript" nillable="true" type="tns:Dyn2CampiScript" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDyn2CampiScript" nillable="true" type="tns:ArrayOfDyn2CampiScript" />
+  <xs:complexType name="Dyn2CampiScript">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Evento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FkD2cId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Script" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Dyn2CampiScript" nillable="true" type="tns:Dyn2CampiScript" />
+  <xs:complexType name="ArrayOfDyn2ModelliScript">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dyn2ModelliScript" nillable="true" type="tns:Dyn2ModelliScript" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDyn2ModelliScript" nillable="true" type="tns:ArrayOfDyn2ModelliScript" />
+  <xs:complexType name="Dyn2ModelliScript">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Evento" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FkD2mtId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Script" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Dyn2ModelliScript" nillable="true" type="tns:Dyn2ModelliScript" />
+  <xs:complexType name="ArrayOfDyn2ModelliD">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dyn2ModelliD" nillable="true" type="tns:Dyn2ModelliD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDyn2ModelliD" nillable="true" type="tns:ArrayOfDyn2ModelliD" />
+  <xs:complexType name="Dyn2ModelliD">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FkD2cId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FkD2mdtId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FkD2mtId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FlgMultiplo" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FlgSpezzaTabella" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Posorizzontale" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Posverticale" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Dyn2ModelliD" nillable="true" type="tns:Dyn2ModelliD" />
+</xs:schema>

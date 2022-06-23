@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" />
+  <xs:element name="CaricaListaIdGerarchiaAteco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CaricaListaIdGerarchiaAtecoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CaricaListaIdGerarchiaAtecoResult" nillable="true" type="q1:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlberoProcDaIdAteco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idAteco" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="ambitoRicerca" type="q2:AmbitoRicerca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlberoProcDaIdAtecoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" minOccurs="0" name="GetAlberoProcDaIdAtecoResult" nillable="true" type="q3:NodoAlberoInterventiDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDettagliAteco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDettagliAtecoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="GetDettagliAtecoResult" nillable="true" type="q4:Ateco" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodiFiglioAteco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPadre" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodiFiglioAtecoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="GetNodiFiglioAtecoResult" nillable="true" type="q5:ArrayOfAteco" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RicercaAteco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="matchParziale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="matchCount" type="xs:int" />
+        <xs:element minOccurs="0" name="modoRicerca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoRicerca" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RicercaAtecoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="RicercaAtecoResult" nillable="true" type="q6:ArrayOfAteco" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificaEsistenzaNodiCollegatiAIdAteco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="software" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idAteco" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" minOccurs="0" name="ambitoRicerca" type="q7:AmbitoRicerca" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificaEsistenzaNodiCollegatiAIdAtecoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificaEsistenzaNodiCollegatiAIdAtecoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

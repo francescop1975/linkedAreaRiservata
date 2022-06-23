@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsComuniService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.GestioneComuni" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.GestioneCittadinanze" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsComuniService_FindComuniDaMatchParziale_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindComuniDaMatchParziale" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_FindComuniDaMatchParziale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindComuniDaMatchParzialeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetListaComuni_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaComuni" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetListaComuni_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaComuniResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetDatiComune_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatiComune" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetDatiComune_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatiComuneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetDatiProvincia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatiProvincia" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetDatiProvincia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatiProvinciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetDatiProvinciaDaCodiceComune_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatiProvinciaDaCodiceComune" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetDatiProvinciaDaCodiceComune_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatiProvinciaDaCodiceComuneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetListaProvincie_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaProvincie" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetListaProvincie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaProvincieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetComuniAssociati_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComuniAssociati" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetComuniAssociati_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComuniAssociatiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetPecComuneAssociato_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPecComuneAssociato" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetPecComuneAssociato_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPecComuneAssociatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetComuneDaCodiceIstat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComuneDaCodiceIstat" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetComuneDaCodiceIstat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComuneDaCodiceIstatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetCittadinanze_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCittadinanze" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetCittadinanze_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCittadinanzeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetCittadinanzaById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCittadinanzaById" />
+  </wsdl:message>
+  <wsdl:message name="IWsComuniService_GetCittadinanzaById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCittadinanzaByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsComuniService">
+    <wsdl:operation name="FindComuniDaMatchParziale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/FindComuniDaMatchParziale" message="tns:IWsComuniService_FindComuniDaMatchParziale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/FindComuniDaMatchParzialeResponse" message="tns:IWsComuniService_FindComuniDaMatchParziale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListaComuni">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetListaComuni" message="tns:IWsComuniService_GetListaComuni_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetListaComuniResponse" message="tns:IWsComuniService_GetListaComuni_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatiComune">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetDatiComune" message="tns:IWsComuniService_GetDatiComune_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetDatiComuneResponse" message="tns:IWsComuniService_GetDatiComune_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatiProvincia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetDatiProvincia" message="tns:IWsComuniService_GetDatiProvincia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetDatiProvinciaResponse" message="tns:IWsComuniService_GetDatiProvincia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatiProvinciaDaCodiceComune">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetDatiProvinciaDaCodiceComune" message="tns:IWsComuniService_GetDatiProvinciaDaCodiceComune_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetDatiProvinciaDaCodiceComuneResponse" message="tns:IWsComuniService_GetDatiProvinciaDaCodiceComune_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListaProvincie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetListaProvincie" message="tns:IWsComuniService_GetListaProvincie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetListaProvincieResponse" message="tns:IWsComuniService_GetListaProvincie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComuniAssociati">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetComuniAssociati" message="tns:IWsComuniService_GetComuniAssociati_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetComuniAssociatiResponse" message="tns:IWsComuniService_GetComuniAssociati_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPecComuneAssociato">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetPecComuneAssociato" message="tns:IWsComuniService_GetPecComuneAssociato_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetPecComuneAssociatoResponse" message="tns:IWsComuniService_GetPecComuneAssociato_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComuneDaCodiceIstat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetComuneDaCodiceIstat" message="tns:IWsComuniService_GetComuneDaCodiceIstat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetComuneDaCodiceIstatResponse" message="tns:IWsComuniService_GetComuneDaCodiceIstat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCittadinanze">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetCittadinanze" message="tns:IWsComuniService_GetCittadinanze_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetCittadinanzeResponse" message="tns:IWsComuniService_GetCittadinanze_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCittadinanzaById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComuniService/GetCittadinanzaById" message="tns:IWsComuniService_GetCittadinanzaById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComuniService/GetCittadinanzaByIdResponse" message="tns:IWsComuniService_GetCittadinanzaById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsComuniService" type="tns:IWsComuniService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindComuniDaMatchParziale">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/FindComuniDaMatchParziale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaComuni">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetListaComuni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatiComune">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetDatiComune" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatiProvincia">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetDatiProvincia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatiProvinciaDaCodiceComune">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetDatiProvinciaDaCodiceComune" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaProvincie">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetListaProvincie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComuniAssociati">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetComuniAssociati" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPecComuneAssociato">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetPecComuneAssociato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComuneDaCodiceIstat">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetComuneDaCodiceIstat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCittadinanze">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetCittadinanze" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCittadinanzaById">
+      <soap:operation soapAction="http://tempuri.org/IWsComuniService/GetCittadinanzaById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsComuniService">
+    <wsdl:port name="BasicHttpBinding_IWsComuniService" binding="tns:BasicHttpBinding_IWsComuniService">
+      <soap:address location="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

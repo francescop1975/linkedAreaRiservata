@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfValoreFiltroRicercaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValoreFiltroRicercaDto" nillable="true" type="tns:ValoreFiltroRicercaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValoreFiltroRicercaDto" nillable="true" type="tns:ArrayOfValoreFiltroRicercaDto" />
+  <xs:complexType name="ValoreFiltroRicercaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="val" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValoreFiltroRicercaDto" nillable="true" type="tns:ValoreFiltroRicercaDto" />
+  <xs:complexType name="ArrayOfRisultatoRicercaDatiDinamiciDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RisultatoRicercaDatiDinamiciDto" nillable="true" type="tns:RisultatoRicercaDatiDinamiciDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRisultatoRicercaDatiDinamiciDto" nillable="true" type="tns:ArrayOfRisultatoRicercaDatiDinamiciDto" />
+  <xs:complexType name="RisultatoRicercaDatiDinamiciDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RisultatoRicercaDatiDinamiciDto" nillable="true" type="tns:RisultatoRicercaDatiDinamiciDto" />
+  <xs:complexType name="ListaModelliDinamiciDomandaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SchedeEndoprocedimenti" nillable="true" type="tns:ArrayOfSchedaDinamicaEndoprocedimentoDto" />
+      <xs:element minOccurs="0" name="SchedeIntervento" nillable="true" type="tns:ArrayOfSchedaDinamicaInterventoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaModelliDinamiciDomandaDto" nillable="true" type="tns:ListaModelliDinamiciDomandaDto" />
+  <xs:complexType name="ArrayOfSchedaDinamicaEndoprocedimentoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchedaDinamicaEndoprocedimentoDto" nillable="true" type="tns:SchedaDinamicaEndoprocedimentoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchedaDinamicaEndoprocedimentoDto" nillable="true" type="tns:ArrayOfSchedaDinamicaEndoprocedimentoDto" />
+  <xs:complexType name="SchedaDinamicaEndoprocedimentoDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchedaDinamicaDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodiceEndo" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchedaDinamicaEndoprocedimentoDto" nillable="true" type="tns:SchedaDinamicaEndoprocedimentoDto" />
+  <xs:complexType name="SchedaDinamicaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="CodiceScheda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoFirma" type="tns:TipoFirmaEnum" />
+      <xs:element minOccurs="0" name="Facoltativa" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Ordine" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FvgMostraNelBackoffice" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Pubblica" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchedaDinamicaDto" nillable="true" type="tns:SchedaDinamicaDto" />
+  <xs:simpleType name="TipoFirmaEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NessunaFirma" />
+      <xs:enumeration value="InteroModello" />
+      <xs:enumeration value="SingoliBlocchi" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoFirmaEnum" nillable="true" type="tns:TipoFirmaEnum" />
+  <xs:complexType name="SchedaDinamicaInterventoDto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SchedaDinamicaDto">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SchedaDinamicaInterventoDto" nillable="true" type="tns:SchedaDinamicaInterventoDto" />
+  <xs:complexType name="ArrayOfSchedaDinamicaInterventoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchedaDinamicaInterventoDto" nillable="true" type="tns:SchedaDinamicaInterventoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchedaDinamicaInterventoDto" nillable="true" type="tns:ArrayOfSchedaDinamicaInterventoDto" />
+  <xs:complexType name="ArrayOfDyn2TestoModello">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Dyn2TestoModello" nillable="true" type="tns:Dyn2TestoModello" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDyn2TestoModello" nillable="true" type="tns:ArrayOfDyn2TestoModello" />
+  <xs:complexType name="Dyn2TestoModello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdNelModello" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipoTesto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Testo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dyn2TestoModello" nillable="true" type="tns:Dyn2TestoModello" />
+  <xs:complexType name="ArrayOfDecodificaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DecodificaDto" nillable="true" type="tns:DecodificaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDecodificaDto" nillable="true" type="tns:ArrayOfDecodificaDto" />
+  <xs:complexType name="DecodificaDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chiave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlgDisabilitato" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Idcomune" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Raggruppamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tabella" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valore" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DecodificaDto" nillable="true" type="tns:DecodificaDto" />
+</xs:schema>

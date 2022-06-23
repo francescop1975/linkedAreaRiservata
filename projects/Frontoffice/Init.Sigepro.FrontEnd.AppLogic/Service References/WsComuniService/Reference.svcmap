@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ae3c38a6-9289-4eac-87e5-e496b65e15d8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WsComuniService.xsd" MetadataType="Schema" ID="2d9fd981-6751-4d5f-95e3-7667080024ed" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WsComuniService1.xsd" MetadataType="Schema" ID="4a518f8f-d297-477f-9a56-a1e4bd359a54" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?xsd=xsd3" />
+    <MetadataFile FileName="WsComuniService2.xsd" MetadataType="Schema" ID="a8253923-65a3-486e-85f3-1d0617407e62" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WsComuniService3.xsd" MetadataType="Schema" ID="60e7ce98-d973-4077-9c67-79051507fc3a" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WsComuniService.wsdl" MetadataType="Wsdl" ID="eb51602d-70ef-4eaf-a86e-c49453b4b4f4" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?wsdl" />
+    <MetadataFile FileName="WsComuniService.disco" MetadataType="Disco" ID="035d6510-5e8b-4d61-ad37-13abf6395391" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/WsComuniService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

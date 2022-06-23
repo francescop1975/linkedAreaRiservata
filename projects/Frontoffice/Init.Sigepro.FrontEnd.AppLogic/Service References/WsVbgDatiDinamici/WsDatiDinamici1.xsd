@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.DatiDinamici" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.DatiDinamici" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" />
+  <xs:complexType name="GetModelliDinamiciDaInterventoEEndoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceIntervento" type="xs:int" />
+      <xs:element minOccurs="0" name="IgnoraTipiLocalizzazione" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaEndo" nillable="true" type="q1:ArrayOfint" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ListaTipiLocalizzazioni" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetModelliDinamiciDaInterventoEEndoRequest" nillable="true" type="tns:GetModelliDinamiciDaInterventoEEndoRequest" />
+  <xs:complexType name="StrutturaModelloDinamicoDto">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="CampiDinamici" nillable="true" type="q3:ArrayOfDyn2Campi" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="Modello" nillable="true" type="q4:Dyn2ModelliT" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="ProprietaCampiDinamici" nillable="true" type="q5:ArrayOfDyn2CampiProprieta" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="ScriptsCampi" nillable="true" type="q6:ArrayOfDyn2CampiScript" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="ScriptsModello" nillable="true" type="q7:ArrayOfDyn2ModelliScript" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" minOccurs="0" name="Struttura" nillable="true" type="q8:ArrayOfDyn2ModelliD" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" minOccurs="0" name="Testi" nillable="true" type="q9:ArrayOfDyn2TestoModello" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StrutturaModelloDinamicoDto" nillable="true" type="tns:StrutturaModelloDinamicoDto" />
+</xs:schema>

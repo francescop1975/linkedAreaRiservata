@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.EndoFrontoffice" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.EndoFrontoffice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="LivelloCaricamentoGerarchia">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Famiglia" />
+      <xs:enumeration value="Categoria" />
+      <xs:enumeration value="Endo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LivelloCaricamentoGerarchia" nillable="true" type="tns:LivelloCaricamentoGerarchia" />
+  <xs:complexType name="RisultatoCaricamentoGerarchiaEndo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Categoria" type="xs:int" />
+      <xs:element minOccurs="0" name="Endo" type="xs:int" />
+      <xs:element minOccurs="0" name="Famiglia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RisultatoCaricamentoGerarchiaEndo" nillable="true" type="tns:RisultatoCaricamentoGerarchiaEndo" />
+</xs:schema>

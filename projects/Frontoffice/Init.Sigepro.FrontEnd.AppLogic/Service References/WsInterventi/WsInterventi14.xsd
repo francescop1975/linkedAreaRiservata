@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.Utils" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Procedure" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Normative" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Oneri" />
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" />
+  <xs:complexType name="NodoAlberoInterventiDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Init.Utils" base="q1:ClassTreeOfInterventoDtoKHKR1_Pi1">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NodoAlberoInterventiDto" nillable="true" type="tns:NodoAlberoInterventiDto" />
+  <xs:complexType name="InterventoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codice" type="xs:int" />
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Documenti" nillable="true" type="tns:ArrayOfDocumentoInterventoDto" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" minOccurs="0" name="Endoprocedimenti" nillable="true" type="q2:ArrayOfFamigliaEndoprocedimentoDto" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Procedure" minOccurs="0" name="FasiAttuative" nillable="true" type="q3:ArrayOfFaseAttuativaDto" />
+      <xs:element minOccurs="0" name="HaNodiFiglio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HaNote" type="xs:boolean" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Normative" minOccurs="0" name="Normative" nillable="true" type="q4:ArrayOfNormativaDto" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Oneri" minOccurs="0" name="Oneri" nillable="true" type="q5:ArrayOfOnereDto" />
+      <xs:element minOccurs="0" name="PubblicaAreaRiservata" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ScCodice" nillable="true" type="xs:string" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" minOccurs="0" name="SchedeDinamiche" nillable="true" type="q6:ArrayOfSchedaDinamicaDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterventoDto" nillable="true" type="tns:InterventoDto" />
+  <xs:complexType name="ArrayOfDocumentoInterventoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentoInterventoDto" nillable="true" type="tns:DocumentoInterventoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentoInterventoDto" nillable="true" type="tns:ArrayOfDocumentoInterventoDto" />
+  <xs:complexType name="DocumentoInterventoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codice" type="xs:int" />
+      <xs:element minOccurs="0" name="CodiceOggetto" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DimensioneMassima" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DomandaFo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EstensioniAmmesse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomeFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Obbligatorio" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RichiedeFirma" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TipoDownload" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentoInterventoDto" nillable="true" type="tns:DocumentoInterventoDto" />
+  <xs:complexType name="ArrayOfInterventoDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InterventoDto" nillable="true" type="tns:InterventoDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterventoDto" nillable="true" type="tns:ArrayOfInterventoDto" />
+</xs:schema>

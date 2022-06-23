@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bf0877d2-d842-4d51-b73d-22246e3508c2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WsEndoFrontofficeService3.xsd" MetadataType="Schema" ID="72b81a7d-e94f-4d98-b6f1-355bdea4c88d" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WsEndoFrontofficeService31.xsd" MetadataType="Schema" ID="b65ca17d-d670-4626-abb9-3345d31b337e" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?xsd=xsd3" />
+    <MetadataFile FileName="WsEndoFrontofficeService1.wsdl" MetadataType="Wsdl" ID="4fddc597-686a-4c0c-8057-98c2b7616080" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?wsdl" />
+    <MetadataFile FileName="WsEndoFrontofficeService1.disco" MetadataType="Disco" ID="10f869ad-2cd5-4e52-b790-1ffaba95fd46" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?disco" />
+    <MetadataFile FileName="WsEndoFrontofficeService32.xsd" MetadataType="Schema" ID="e800d26f-e6ad-4752-9448-f54dc210774b" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WsEndoFrontofficeService33.xsd" MetadataType="Schema" ID="c57bfb55-15eb-48ea-b6d1-808e9c617ad0" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

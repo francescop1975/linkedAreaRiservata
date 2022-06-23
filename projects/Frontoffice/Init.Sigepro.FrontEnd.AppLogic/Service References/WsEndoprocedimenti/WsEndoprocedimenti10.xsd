@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AmbitoRicerca">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AreaRiservata" />
+      <xs:enumeration value="FrontofficePubblico" />
+      <xs:enumeration value="Backoffice" />
+      <xs:enumeration value="UtenteTesterAreaRiservata" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AmbitoRicerca" nillable="true" type="tns:AmbitoRicerca" />
+</xs:schema>

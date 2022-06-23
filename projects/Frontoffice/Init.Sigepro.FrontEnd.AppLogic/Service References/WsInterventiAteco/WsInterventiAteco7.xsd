@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventiAteco.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" />
+  <xs:complexType name="Ateco">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseDataClass">
+        <xs:sequence>
+          <xs:element name="_x003C_HasChilds_x003E_k__BackingField" type="xs:boolean" />
+          <xs:element name="_x003C_HasDescription_x003E_k__BackingField" type="xs:boolean" />
+          <xs:element name="m_codice" nillable="true" type="xs:string" />
+          <xs:element name="m_codicebreve" nillable="true" type="xs:string" />
+          <xs:element name="m_descrizione" nillable="true" type="xs:string" />
+          <xs:element name="m_fkidpadre" nillable="true" type="xs:int" />
+          <xs:element name="m_id" nillable="true" type="xs:int" />
+          <xs:element name="m_titolo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Ateco" nillable="true" type="tns:Ateco" />
+  <xs:complexType name="BaseDataClass">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" base="q1:DataClass">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BaseDataClass" nillable="true" type="tns:BaseDataClass" />
+  <xs:complexType name="ArrayOfAteco">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ateco" nillable="true" type="tns:Ateco" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAteco" nillable="true" type="tns:ArrayOfAteco" />
+</xs:schema>

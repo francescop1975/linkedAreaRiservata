@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsInterventi" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Interventi" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Init.Utils" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Endoprocedimenti" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Normative" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Oneri" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.DatiDinamici" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Procedure" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Data" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd12" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.Common" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.DTO.AllegatiDomandaOnline" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.Interventi" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.AttraversamentoAlberoInterventi.VerificaAttivazione" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsInterventi_GetAlberaturaDaIdNodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlberaturaDaIdNodo" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetAlberaturaDaIdNodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlberaturaDaIdNodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetCategorieAllegatiInterventoChePermettonoUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategorieAllegatiInterventoChePermettonoUpload" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetCategorieAllegatiInterventoChePermettonoUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategorieAllegatiInterventoChePermettonoUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetCodiceOggettoWorkflowDaCodiceIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodiceOggettoWorkflowDaCodiceIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetCodiceOggettoWorkflowDaCodiceIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodiceOggettoWorkflowDaCodiceInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetDettagliIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDettagliIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetDettagliIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDettagliInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetDocumentiDaCodiceIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentiDaCodiceIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetDocumentiDaCodiceIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentiDaCodiceInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetIdCertificatoDiInvioDomandaDaIdIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdCertificatoDiInvioDomandaDaIdIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetIdCertificatoDiInvioDomandaDaIdIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdCertificatoDiInvioDomandaDaIdInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetIdDrupalDaCodiceIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdDrupalDaCodiceIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetIdDrupalDaCodiceIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdDrupalDaCodiceInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetIdRiepilogoDomandaDaIdIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdRiepilogoDomandaDaIdIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetIdRiepilogoDomandaDaIdIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdRiepilogoDomandaDaIdInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetListaIdNodiPadreIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaIdNodiPadreIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetListaIdNodiPadreIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaIdNodiPadreInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetLivelloDiAccessoIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLivelloDiAccessoIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetLivelloDiAccessoIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLivelloDiAccessoInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetSottonodiIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSottonodiIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetSottonodiIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSottonodiInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetSottonodiInterventoDaIdAteco_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSottonodiInterventoDaIdAteco" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetSottonodiInterventoDaIdAteco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSottonodiInterventoDaIdAtecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetStrutturaAlberoInterventi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrutturaAlberoInterventi" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_GetStrutturaAlberoInterventi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrutturaAlberoInterventiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_HaPresentatoDomandePerIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:HaPresentatoDomandePerIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_HaPresentatoDomandePerIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HaPresentatoDomandePerInterventoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_InterventoSupportaRedirect_InputMessage">
+    <wsdl:part name="parameters" element="tns:InterventoSupportaRedirect" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_InterventoSupportaRedirect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InterventoSupportaRedirectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_RicercaTestualeInterventi_InputMessage">
+    <wsdl:part name="parameters" element="tns:RicercaTestualeInterventi" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_RicercaTestualeInterventi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RicercaTestualeInterventiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_VerificaAccessoIntervento_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaAccessoIntervento" />
+  </wsdl:message>
+  <wsdl:message name="IWsInterventi_VerificaAccessoIntervento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaAccessoInterventoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsInterventi">
+    <wsdl:operation name="GetAlberaturaDaIdNodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetAlberaturaDaIdNodo" message="tns:IWsInterventi_GetAlberaturaDaIdNodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetAlberaturaDaIdNodoResponse" message="tns:IWsInterventi_GetAlberaturaDaIdNodo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorieAllegatiInterventoChePermettonoUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetCategorieAllegatiInterventoChePermettonoUpload" message="tns:IWsInterventi_GetCategorieAllegatiInterventoChePermettonoUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetCategorieAllegatiInterventoChePermettonoUploadResponse" message="tns:IWsInterventi_GetCategorieAllegatiInterventoChePermettonoUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCodiceOggettoWorkflowDaCodiceIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetCodiceOggettoWorkflowDaCodiceIntervento" message="tns:IWsInterventi_GetCodiceOggettoWorkflowDaCodiceIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetCodiceOggettoWorkflowDaCodiceInterventoResponse" message="tns:IWsInterventi_GetCodiceOggettoWorkflowDaCodiceIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDettagliIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetDettagliIntervento" message="tns:IWsInterventi_GetDettagliIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetDettagliInterventoResponse" message="tns:IWsInterventi_GetDettagliIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentiDaCodiceIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetDocumentiDaCodiceIntervento" message="tns:IWsInterventi_GetDocumentiDaCodiceIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetDocumentiDaCodiceInterventoResponse" message="tns:IWsInterventi_GetDocumentiDaCodiceIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdCertificatoDiInvioDomandaDaIdIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetIdCertificatoDiInvioDomandaDaIdIntervento" message="tns:IWsInterventi_GetIdCertificatoDiInvioDomandaDaIdIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetIdCertificatoDiInvioDomandaDaIdInterventoResponse" message="tns:IWsInterventi_GetIdCertificatoDiInvioDomandaDaIdIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdDrupalDaCodiceIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetIdDrupalDaCodiceIntervento" message="tns:IWsInterventi_GetIdDrupalDaCodiceIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetIdDrupalDaCodiceInterventoResponse" message="tns:IWsInterventi_GetIdDrupalDaCodiceIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdRiepilogoDomandaDaIdIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetIdRiepilogoDomandaDaIdIntervento" message="tns:IWsInterventi_GetIdRiepilogoDomandaDaIdIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetIdRiepilogoDomandaDaIdInterventoResponse" message="tns:IWsInterventi_GetIdRiepilogoDomandaDaIdIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListaIdNodiPadreIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetListaIdNodiPadreIntervento" message="tns:IWsInterventi_GetListaIdNodiPadreIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetListaIdNodiPadreInterventoResponse" message="tns:IWsInterventi_GetListaIdNodiPadreIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLivelloDiAccessoIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetLivelloDiAccessoIntervento" message="tns:IWsInterventi_GetLivelloDiAccessoIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetLivelloDiAccessoInterventoResponse" message="tns:IWsInterventi_GetLivelloDiAccessoIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSottonodiIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetSottonodiIntervento" message="tns:IWsInterventi_GetSottonodiIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetSottonodiInterventoResponse" message="tns:IWsInterventi_GetSottonodiIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSottonodiInterventoDaIdAteco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetSottonodiInterventoDaIdAteco" message="tns:IWsInterventi_GetSottonodiInterventoDaIdAteco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetSottonodiInterventoDaIdAtecoResponse" message="tns:IWsInterventi_GetSottonodiInterventoDaIdAteco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrutturaAlberoInterventi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/GetStrutturaAlberoInterventi" message="tns:IWsInterventi_GetStrutturaAlberoInterventi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/GetStrutturaAlberoInterventiResponse" message="tns:IWsInterventi_GetStrutturaAlberoInterventi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HaPresentatoDomandePerIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/HaPresentatoDomandePerIntervento" message="tns:IWsInterventi_HaPresentatoDomandePerIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/HaPresentatoDomandePerInterventoResponse" message="tns:IWsInterventi_HaPresentatoDomandePerIntervento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InterventoSupportaRedirect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/InterventoSupportaRedirect" message="tns:IWsInterventi_InterventoSupportaRedirect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/InterventoSupportaRedirectResponse" message="tns:IWsInterventi_InterventoSupportaRedirect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RicercaTestualeInterventi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/RicercaTestualeInterventi" message="tns:IWsInterventi_RicercaTestualeInterventi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/RicercaTestualeInterventiResponse" message="tns:IWsInterventi_RicercaTestualeInterventi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificaAccessoIntervento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInterventi/VerificaAccessoIntervento" message="tns:IWsInterventi_VerificaAccessoIntervento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInterventi/VerificaAccessoInterventoResponse" message="tns:IWsInterventi_VerificaAccessoIntervento_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsInterventi" type="tns:IWsInterventi">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAlberaturaDaIdNodo">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetAlberaturaDaIdNodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorieAllegatiInterventoChePermettonoUpload">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetCategorieAllegatiInterventoChePermettonoUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCodiceOggettoWorkflowDaCodiceIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetCodiceOggettoWorkflowDaCodiceIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDettagliIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetDettagliIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentiDaCodiceIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetDocumentiDaCodiceIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdCertificatoDiInvioDomandaDaIdIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetIdCertificatoDiInvioDomandaDaIdIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdDrupalDaCodiceIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetIdDrupalDaCodiceIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdRiepilogoDomandaDaIdIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetIdRiepilogoDomandaDaIdIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaIdNodiPadreIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetListaIdNodiPadreIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLivelloDiAccessoIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetLivelloDiAccessoIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSottonodiIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetSottonodiIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSottonodiInterventoDaIdAteco">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetSottonodiInterventoDaIdAteco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrutturaAlberoInterventi">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/GetStrutturaAlberoInterventi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HaPresentatoDomandePerIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/HaPresentatoDomandePerIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterventoSupportaRedirect">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/InterventoSupportaRedirect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RicercaTestualeInterventi">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/RicercaTestualeInterventi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificaAccessoIntervento">
+      <soap:operation soapAction="http://tempuri.org/IWsInterventi/VerificaAccessoIntervento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsInterventi">
+    <wsdl:port name="BasicHttpBinding_IWsInterventi" binding="tns:BasicHttpBinding_IWsInterventi">
+      <soap:address location="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

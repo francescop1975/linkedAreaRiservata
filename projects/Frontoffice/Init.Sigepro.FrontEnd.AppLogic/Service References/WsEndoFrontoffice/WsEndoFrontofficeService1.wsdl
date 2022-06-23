@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsEndoFrontofficeService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.GestioneEndoprocedimenti" />
+      <xsd:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Sigepro.net.WebServices.WsAreaRiservata.WcfServices.EndoFrontoffice" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsEndoFrontofficeService_GetFamiglieEndoFrontoffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFamiglieEndoFrontoffice" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_GetFamiglieEndoFrontoffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFamiglieEndoFrontofficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_GetCategorieEndoFrontoffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategorieEndoFrontoffice" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_GetCategorieEndoFrontoffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategorieEndoFrontofficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_GetListaEndoFrontoffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaEndoFrontoffice" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_GetListaEndoFrontoffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListaEndoFrontofficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_GetGerarchiaEndo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGerarchiaEndo" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_GetGerarchiaEndo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGerarchiaEndoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_RicercaTestualeEndo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RicercaTestualeEndo" />
+  </wsdl:message>
+  <wsdl:message name="IWsEndoFrontofficeService_RicercaTestualeEndo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RicercaTestualeEndoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsEndoFrontofficeService">
+    <wsdl:operation name="GetFamiglieEndoFrontoffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/GetFamiglieEndoFrontoffice" message="tns:IWsEndoFrontofficeService_GetFamiglieEndoFrontoffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/GetFamiglieEndoFrontofficeResponse" message="tns:IWsEndoFrontofficeService_GetFamiglieEndoFrontoffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorieEndoFrontoffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/GetCategorieEndoFrontoffice" message="tns:IWsEndoFrontofficeService_GetCategorieEndoFrontoffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/GetCategorieEndoFrontofficeResponse" message="tns:IWsEndoFrontofficeService_GetCategorieEndoFrontoffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListaEndoFrontoffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/GetListaEndoFrontoffice" message="tns:IWsEndoFrontofficeService_GetListaEndoFrontoffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/GetListaEndoFrontofficeResponse" message="tns:IWsEndoFrontofficeService_GetListaEndoFrontoffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGerarchiaEndo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/GetGerarchiaEndo" message="tns:IWsEndoFrontofficeService_GetGerarchiaEndo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/GetGerarchiaEndoResponse" message="tns:IWsEndoFrontofficeService_GetGerarchiaEndo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RicercaTestualeEndo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/RicercaTestualeEndo" message="tns:IWsEndoFrontofficeService_RicercaTestualeEndo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsEndoFrontofficeService/RicercaTestualeEndoResponse" message="tns:IWsEndoFrontofficeService_RicercaTestualeEndo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsEndoFrontofficeService" type="tns:IWsEndoFrontofficeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFamiglieEndoFrontoffice">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoFrontofficeService/GetFamiglieEndoFrontoffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorieEndoFrontoffice">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoFrontofficeService/GetCategorieEndoFrontoffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListaEndoFrontoffice">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoFrontofficeService/GetListaEndoFrontoffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGerarchiaEndo">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoFrontofficeService/GetGerarchiaEndo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RicercaTestualeEndo">
+      <soap:operation soapAction="http://tempuri.org/IWsEndoFrontofficeService/RicercaTestualeEndo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsEndoFrontofficeService">
+    <wsdl:port name="BasicHttpBinding_IWsEndoFrontofficeService" binding="tns:BasicHttpBinding_IWsEndoFrontofficeService">
+      <soap:address location="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/EndoFrontoffice/WsEndoFrontofficeService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

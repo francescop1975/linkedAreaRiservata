@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ab97f46b-4d0f-4e95-9afa-3e16b4924793" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WsInterventi.xsd" MetadataType="Schema" ID="d07fd526-98f9-404c-889e-6aaf277e6f70" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd1" />
+    <MetadataFile FileName="WsInterventi1.xsd" MetadataType="Schema" ID="127022cb-f37a-4496-a499-8efcece6e332" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd7" />
+    <MetadataFile FileName="WsInterventi2.xsd" MetadataType="Schema" ID="9bec70a9-3aa4-4e14-b234-36c1b0d24df5" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd3" />
+    <MetadataFile FileName="WsInterventi3.xsd" MetadataType="Schema" ID="3f3b6e68-dabd-44de-97c5-ee9c4754a6e6" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd14" />
+    <MetadataFile FileName="WsInterventi.disco" MetadataType="Disco" ID="4ab58134-1a4c-4ac4-bd98-cbe3815d8da6" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?disco" />
+    <MetadataFile FileName="WsInterventi4.xsd" MetadataType="Schema" ID="74c1a19e-18e6-4cb7-9e58-b6294830b38b" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd8" />
+    <MetadataFile FileName="WsInterventi5.xsd" MetadataType="Schema" ID="09258435-c72c-4953-b5bf-07f7df0c004b" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd4" />
+    <MetadataFile FileName="WsInterventi6.xsd" MetadataType="Schema" ID="4e1861c8-4f53-44d7-988e-d1e6f89341f8" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd0" />
+    <MetadataFile FileName="WsInterventi7.xsd" MetadataType="Schema" ID="40379f80-d134-4c2f-870b-24af13e7a675" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd13" />
+    <MetadataFile FileName="WsInterventi8.xsd" MetadataType="Schema" ID="181dd78c-fd76-4753-9285-c2f1477fbc4d" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd10" />
+    <MetadataFile FileName="WsInterventi16.xsd" MetadataType="Schema" ID="0a93eed7-7555-4287-a83e-a93a75bec47f" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd16" />
+    <MetadataFile FileName="WsInterventi9.xsd" MetadataType="Schema" ID="2a40a686-d4ce-4772-8ea9-6df34eac4f7b" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd9" />
+    <MetadataFile FileName="WsInterventi10.xsd" MetadataType="Schema" ID="a33b8e94-c4e2-49ec-aff5-a12f66e88016" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd5" />
+    <MetadataFile FileName="WsInterventi11.xsd" MetadataType="Schema" ID="bbeccc8f-cfe0-4943-b696-114c697eca8e" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd15" />
+    <MetadataFile FileName="WsInterventi12.xsd" MetadataType="Schema" ID="20656ec6-d35b-4df8-a191-60d25252e5ec" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd12" />
+    <MetadataFile FileName="WsInterventi13.xsd" MetadataType="Schema" ID="aefbfd5c-7687-4600-8f74-810bc49573a5" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd6" />
+    <MetadataFile FileName="WsInterventi14.xsd" MetadataType="Schema" ID="2e09eaf5-e005-41d4-915c-67b200c387b6" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd2" />
+    <MetadataFile FileName="WsInterventi15.xsd" MetadataType="Schema" ID="b5474cf5-fecb-437d-a2fc-ea23c9b99884" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?xsd=xsd11" />
+    <MetadataFile FileName="WsInterventi.wsdl" MetadataType="Wsdl" ID="9e6550b1-de5f-4ebd-94d0-7df18fac0c5e" SourceId="1" SourceUrl="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/Interventi/WsInterventi.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

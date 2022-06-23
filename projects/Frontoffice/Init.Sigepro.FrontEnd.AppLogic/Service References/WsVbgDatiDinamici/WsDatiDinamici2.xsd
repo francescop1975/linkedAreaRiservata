@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PersonalLib2.Sql" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2640/sigepro.net/WebServices/WsAreaRiservata/WcfServices/DatiDinamici/WsDatiDinamici.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="DataClass">
+    <xs:sequence>
+      <xs:element name="_dataTableName" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_OrderBy_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_x003C_OthersJoinClause_x003E_k__BackingField" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_x003C_OthersSelectColumns_x003E_k__BackingField" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_x003C_OthersTables_x003E_k__BackingField" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="_x003C_OthersWhereClause_x003E_k__BackingField" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element name="_x003C_SelectColumns_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_UseForeign_x003E_k__BackingField" type="tns:useForeignEnum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataClass" nillable="true" type="tns:DataClass" />
+  <xs:simpleType name="useForeignEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No" />
+      <xs:enumeration value="Yes" />
+      <xs:enumeration value="Recoursive" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="useForeignEnum" nillable="true" type="tns:useForeignEnum" />
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.AttraversamentoAlberoInterventi.VerificaAttivazione" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Init.SIGePro.Manager.Logic.AttraversamentoAlberoInterventi.VerificaAttivazione" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="RisultatoVerificaAccessoIntervento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Accessibile" />
+      <xs:enumeration value="NonPubblicato" />
+      <xs:enumeration value="LivelloAutenticazioneNonSufficiente" />
+      <xs:enumeration value="InterventoNonAttivo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RisultatoVerificaAccessoIntervento" nillable="true" type="tns:RisultatoVerificaAccessoIntervento" />
+</xs:schema>
